@@ -11,7 +11,7 @@ public class ExceptionHandler {
         if (ex instanceof TableNotFoundException) {
             return new Response<>("Resource not found", ex.getMessage());
         }
-        if (ex instanceof IllegalStateException) {
+        if (ex instanceof IllegalArgumentException) {
             return new Response<>("Wrong request format", ex.getMessage());
         }
         if (ex instanceof IOException) {
